@@ -1,0 +1,709 @@
+/* Base Styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+nav a:hover, nav a.active {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 5rem; /* Recent Projects 전 여백 추가 */
+}
+
+/* 이름과 직책 컨테이너 */
+.name-title-container {
+    align-self: flex-end; /* 오른쪽 정렬 */
+    text-align: right;
+    margin-bottom: 3rem; /* 철학 문구와의 간격 */
+}
+
+
+.name {
+    font-size: 3rem;
+    color: #4c4c4c;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    line-height: 1.2; /* 줄 간격 조정 */
+}
+
+.titles {
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 1.4; /* 줄 간격 조정 */
+}
+
+/* 철학 문구 컨테이너 */
+.philosophy-container {
+    width: 65%; /* 화면의 70% 차지 */
+    align-self: center; /* 중앙 정렬 */
+    margin-bottom: 0rem; /* Recent Projects 전 추가 여백 */
+}
+
+.intro-philosophy {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #291e10;
+    font-weight: 300;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 기존 intro class 필요 없으므로 제거 */
+.intro {
+    display: none;
+}
+
+
+/* Section Titles */
+h1.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 3rem 0;
+}
+
+/* Home View - Projects Grid */
+.projects-grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    width: 30%;
+    margin-bottom: 4rem;
+}
+
+.project-card-image {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.project-card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Quote Section */
+.quote-section {
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.quote {
+    font-size: 2.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+.quote-author {
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+.projects-gallery {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-between; /* 간격 제거를 위해 space-between에서 center로 변경 */
+    margin-bottom: 2rem; /* 행간 간격 제거 */
+}
+
+.project-item {
+    width: 49%; /* 정확히 절반을 차지 */
+    position: relative;
+    cursor: pointer;
+    aspect-ratio: 1920 / 1080; /* 정사각형 비율 유지 (필요에 따라 조정) */
+    overflow: hidden; /* 넘치는 요소 제거 */
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.project-image img {
+    max-width: 100%; /* 이미지가 컨테이너의 70%만 차지하도록 설정 */
+    max-height: 100%;
+    object-fit: contain; /* 이미지 비율 유지 */
+    display: block;
+}
+
+/* 호버 오버레이 스타일 수정 */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85); /* 50% 흰색 오버레이 */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15%; /* 패딩을 퍼센트로 설정하여 항상 이미지 내부에 유지 */
+    box-sizing: border-box;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+/* 프로젝트 메타 정보 (카테고리와 연도) */
+.project-meta {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-category {
+    font-weight: normal;
+}
+
+.project-year {
+    color: #555;
+}
+
+/* 프로젝트 제목 */
+.project-title {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin: 0.5rem 0;
+    line-height: 1.2;
+}
+
+/* 프로젝트 발췌문 */
+.project-excerpt {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.5rem 0 1rem;
+}
+
+/* Read More 링크 */
+.project-read-more {
+    color: #777;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: auto;
+    transition: color 0.2s;
+}
+
+.project-read-more:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+
+/* 프로젝트 상세 페이지 스타일 */
+#project-detail-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.project-detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.project-detail-header {
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #555;
+    padding: 0;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.back-button:hover {
+    color: #000;
+}
+
+.project-detail-meta {
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.project-detail-category,
+.project-detail-year {
+    font-size: 1rem;
+    color: #555;
+}
+
+.project-detail-title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 1rem 0 2rem;
+}
+
+.project-detail-content {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* 프로젝트 상세 이미지 스타일 */
+.project-image-full {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.project-image-full img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.project-image-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.project-image-grid img {
+    width: 48%;
+    height: auto;
+    object-fit: contain;
+}
+
+.project-detail-section h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 2rem 0 1rem;
+}
+.project-image-full figure, .project-image-grid figure {
+    margin: 0;
+    width: 100%;
+}
+
+.project-image-full figcaption, .project-image-grid figcaption {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* 이미지 그리드 내의 figure 태그가 이미지 크기를 유지하도록 설정 */
+.project-image-grid figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 링크 스타일 */
+.project-detail-section a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-detail-section a:hover {
+    color: #004080;
+    text-decoration: underline;
+}
+/* Resume Styles */
+.resume-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.cv-content {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cv-section {
+    margin-bottom: 3rem;
+}
+
+.cv-section h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.cv-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.cv-year {
+    width: 150px;
+    font-weight: normal;
+    flex-shrink: 0;
+    padding-right: 20px
+}
+
+.cv-details {
+    flex-grow: 1;
+}
+
+.cv-title {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.cv-institution {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.cv-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.publication-item {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.publication-year {
+    width: 150px;
+    font-weight: normal;
+    flex-shrink: 0;
+}
+
+.publication-details {
+    flex-grow: 1;
+}
+
+.publication-title {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.publication-authors {
+    font-style: italic;
+    margin-bottom: 0.2rem;
+}
+
+.publication-journal {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.publication-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.award-group {
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+
+.award-year {
+    width: 150px;
+    font-weight: normal;
+    flex-shrink: 0;
+}
+
+.award-list {
+    flex-grow: 1;
+}
+
+/* 각 상 항목 (세로 배치) */
+.award-item-vertical {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dotted #e0e0e0; /* 같은 년도의 항목 사이에 구분선 */
+}
+
+.award-item-vertical:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none; /* 마지막 항목은 구분선 없음 */
+}
+
+.award-title {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.award-org {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.award-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.skill-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.skill-category-title {
+    width: 150px;
+    font-weight: normal;
+    flex-shrink: 0;
+    padding-right: 20px;
+}
+
+.skill-list {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    display: inline-block;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Read More Link */
+.read-more {
+    display: inline-block;
+    color: #777;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Project Image Backgrounds */
+.aeneid-image {
+    background-color: #b3812b;
+}
+
+.since1878-image {
+    background-color: #d9d9d9;
+}
+
+.library-image {
+    background-color: #8b4513;
+}
+
+/* View Sections Visibility */
+#home-view, #artwork-view, #resume-view {
+    display: none;
+}
+
+.active-view {
+    display: block !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .project-card {
+        width: 45%;
+    }
+
+    .projects-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        
+    }
+    
+    .intro {
+        text-align: center; /* 모바일에서는 중앙 정렬 */
+        margin-right: 0;
+        margin-bottom: 2rem;
+        justify-content: center; /* 모바일에서는 중앙 정렬 */
+    }
+
+    .name-title-container {
+        align-self: center;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .philosophy-container {
+        width: 90%;
+        margin-bottom: 3rem;
+    }
+    
+    .intro-philosophy {
+        font-size: 1.2rem;
+    }
+    
+    .profile-pic {
+        height: auto;
+        align-items: center; /* 모바일에서는 중앙 정렬 */
+    }
+    
+    .profile-pic img {
+        max-height: 250px;
+        width: auto;
+    }
+    
+    .titles {
+        margin-bottom: 1rem; /* 모바일에서는 여백 추가 */
+    }
+    
+    .project-card {
+        width: 100%;
+    }
+    
+    .gallery-row {
+        flex-direction: column;
+    }
+    
+    .project-item {
+        width: 100%;
+    }
+    .project-overlay {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .project-image-grid {
+        flex-direction: column;
+    }
+    
+    .project-image-grid img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .cv-item {
+        flex-direction: column;
+    }
+    
+    .cv-year {
+        margin-bottom: 0.5rem;
+    }
+
+    .publication-item,
+    .award-group {
+        flex-direction: column;
+    }
+    
+    .publication-year,
+    .award-year {
+        margin-bottom: 0.5rem;
+    }
+    
+    .award-item-vertical {
+        margin-bottom: 1.5rem;
+        padding-left: 0; /* 모바일에서는 왼쪽 여백 제거 */
+    }
+
+    .skill-item {
+        flex-direction: column;
+    }
+    
+    .skill-category-title {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+    
+    .skill-list {
+        padding-left: 0;
+    }
+}

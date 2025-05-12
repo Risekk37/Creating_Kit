@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Kit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo" id="home-tab">Creating Kit</div>
+        <nav>
+            <a id="project-tab">Project</a>
+            <a id="resume-tab">Resume</a>
+            <div class="social-icons">
+                <a href="mailto:kk3775@columbia.edu"><img src="img/mail.png" alt="Email"></a>
+                <a href="https://www.linkedin.com/in/kitae-kim-723b00244/"><img src="img/Linkedin.png" alt="LinkedIn"></a>   
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home View (Default) -->
+        <div id="home-view" class="active-view">
+            <section class="intro-section">
+                <div class="name-title-container">
+                    <h1 class="name">Kitae Kim</h1>
+                    <div class="titles">Computational Designer, Architecture, Developer and Researcher</div>
+                </div>
+                
+                <div class="philosophy-container">
+                    <p class="intro-philosophy">I create at the intersection of data and design, where algorithms meet human experience. My work explores how technology can enhance accessibility and bridge societal gaps through thoughtful computational solutions.</p>
+                </div>
+            </section>
+            
+            <h1 class="section-title">Recent Projects</h1>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-project-id="project1">
+                    <div class="aeneid-image project-card-image">
+                        <img src="img/project1.jpg" alt="Vergil's Aeneid Textbook">
+                    </div>
+                    <div class="project-card-title">The Grocery Link</div>
+                    <div class="project-card-description">
+                        Analysis Tool for Food Deserts and Delivery Gaps.<br>The Grocery Link is a data-driven tool that visualizes issues of food accessibility across the United States. By identifying areas where food deserts and the absence of delivery services overlap, it highlights the most vulnerable regions at a glance.
+                    </div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                
+                <div class="project-card" data-project-id="project2">
+                    <div class="since1878-image project-card-image">
+                        <img src="img/project2.jpg" alt="Since 1878">
+                    </div>
+                    <div class="project-card-title">Automated Fabrication</div>
+                    <div class="project-card-description">
+                        This project advances glue-free fabrication of interior insulation systems by developing self-supporting structures using automated computational tools like Grasshopper (.gh) and robotics.
+                    </div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                
+                <div class="project-card" data-project-id="project3">
+                    <div class="library-image project-card-image">
+                        <img src="img/project3.jpg" alt="50th Anniversary Library">
+                    </div>
+                    <div class="project-card-title">Group Delivery, Prototyping Chrome Extension</div>
+                    <div class="project-card-description">
+                        This service enables multiple households to consolidate orders for a single delivery. By having one delivery person handle multiple orders simultaneously, we can extend delivery to previously unserved areas and reduce delivery costs through sharing. This approach also benefits grocery retailers, who can expand their customer base with minimal additional delivery expenses.
+                    </div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Projects View -->
+        <div id="artwork-view">
+            <div class="projects-gallery">
+                <!-- 첫 번째 행 -->
+                <div class="gallery-row">
+                    <!-- 프로젝트 1 -->
+                    <div class="project-item" data-project-id="project1">
+                        <div class="project-image">
+                            <img src="img/project1.jpg" alt="Urban Planning Project">
+                            <div class="project-overlay">
+                                <div class="project-meta">
+                                    <span class="project-category">Computational Tool</span>
+                                    <span class="project-year">2025</span>
+                                </div>
+                                <h3 class="project-title">The Grocery Link</h3>
+                                <p class="project-excerpt">Analysis Tool for Food Deserts and Delivery Gaps.<br>The Grocery Link is a data-driven tool that visualizes issues of food accessibility across the United States. By identifying areas where food deserts and the absence of delivery services overlap, it highlights the most vulnerable regions at a glance.</p>
+                                <a href="#" class="project-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 프로젝트 2 -->
+                    <div class="project-item" data-project-id="project2">
+                        <div class="project-image">
+                            <img src="img/project2.jpg" alt="Data Visualization Project">
+                            <div class="project-overlay">
+                                <div class="project-meta">
+                                    <span class="project-category">Automated Fabrication</span>
+                                    <span class="project-year">2024</span>
+                                </div>
+                                <h3 class="project-title">Transformative Automation</h3>
+                                <p class="project-excerpt">This project advances glue-free fabrication of interior insulation systems by developing self-supporting structures using automated computational tools like Grasshopper (.gh) and robotics.</p>
+                                <a href="#" class="project-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 두 번째 행 -->
+                <div class="gallery-row">
+                    <!-- 프로젝트 3 -->
+                    <div class="project-item" data-project-id="project3">
+                        <div class="project-image">
+                            <img src="img/project3.jpg" alt="Architectural Design">
+                            <div class="project-overlay">
+                                <div class="project-meta">
+                                    <span class="project-category">Chrome Extension</span>
+                                    <span class="project-year">2025</span>
+                                </div>
+                                <h3 class="project-title">Group Delivery, Prototyping Chrome Extension</h3>
+                                <p class="project-excerpt">Group Delivery service enables multiple households to consolidate orders for a single delivery. By having one delivery person handle multiple orders simultaneously, we can extend delivery to previously unserved areas and reduce delivery costs through sharing. This approach also benefits grocery retailers, who can expand their customer base with minimal additional delivery expenses.</p>
+                                <a href="#" class="project-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 프로젝트 4 -->
+                    <div class="project-item" data-project-id="project4">
+                        <div class="project-image">
+                            <img src="img/project4.jpg" alt="Computational Design">
+                            <div class="project-overlay">
+                                <div class="project-meta">
+                                    <span class="project-category">Interactive Automaton</span>
+                                    <span class="project-year">2025</span>
+                                </div>
+                                <h3 class="project-title">Lumen Beat</h3>
+                                <p class="project-excerpt">Interactive lighting automaton that transforms a user's heartbeat into ambient light</p>
+                                <a href="#" class="project-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="gallery-row">
+                    <div class="project-item" data-project-id="project5">
+                        <div class="project-image">
+                            <img src="img/project5.jpg" alt="Computational Design">
+                            <div class="project-overlay">
+                                <div class="project-meta">
+                                    <span class="project-category">Computational Design</span>
+                                    <span class="project-year">2024</span>
+                                </div>
+                                <h3 class="project-title">Cost Burden & Social Discomfort of Delivery Services</h3>
+                                <p class="project-excerpt">This research examines socioeconomic inequalities in delivery service access across New York City, focusing on how delivery fees disproportionately affect lower-income households</p>
+                                <a href="#" class="project-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item" data-project-id="project6">
+                        <div class="project-image">
+                            <img src="img/project6.jpg" alt="Computational Design">
+                            <div class="project-overlay">
+                                <div class="project-meta">
+                                    <span class="project-category">Maping</span>
+                                    <span class="project-year">2024</span>
+                                </div>
+                                <h3 class="project-title">Delivery Service Accessibility in USA</h3>
+                                <p class="project-excerpt">Research project maps and analyzes the geographic distribution of delivery services across the United States, identifying accessibility gaps and "delivery deserts.</p>
+                                <a href="#" class="project-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 프로젝트 상세 페이지 템플릿 (초기에는 숨겨져 있음) -->
+        <div id="project-detail-view" class="hidden">
+            <div class="project-detail-container">
+                <div class="project-detail-header">
+                    <button id="back-to-projects" class="back-button">&larr; Back to Projects</button>
+                    <div class="project-detail-meta">
+                        <span class="project-detail-category">Category</span>
+                        <span class="project-detail-year">Year</span>
+                    </div>
+                    <h2 class="project-detail-title">Project Title</h2>
+                </div>
+                
+                <div class="project-detail-content">
+                    <!-- 여기에 동적으로 프로젝트 내용이 로드됩니다 -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Resume View -->
+        <div id="resume-view">
+            <section class="resume-container">
+                <h1 class="section-title">Curriculum Vitae</h1>
+                <div class="cv-content">
+                    <div class="cv-section">
+                        <h2>Education</h2>
+                        <div class="cv-item">
+                            <div class="cv-year">May 2024 - May 2025</div>
+                            <div class="cv-details">
+                                <div class="cv-title">Master of Science in Computational Design Practices</div>
+                                <div class="cv-institution">Columbia University, GSAPP</div>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-year">Mar 2018 - Feb 2024</div>
+                            <div class="cv-details">
+                                <div class="cv-title">Bachelor of Architecture; School of Architecture <br>Bachelor of Science in Electrical Engineering</div>
+                                <div class="cv-institution">Soongsil University</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h2>Experience</h2>
+                        <div class="cv-item">
+                            <div class="cv-year">Jun 2024 - Sep 2024</div>
+                            <div class="cv-details">
+                                <div class="cv-title">Research Assistant</div>
+                                <div class="cv-institution">Center for Spatial Research, New York, United States</div>
+                                <div class="cv-description">Contributed to the Cities of Bail project, which visualizes the practice of mortgaging property to secure bail across U.S.<br>Developed and designed the project page using GIS and JavaScript, including data analysis and visualization </div>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-year">Sep 2024 - Present</div>
+                            <div class="cv-details">
+                                <div class="cv-title">Making Studio Crew</div>
+                                <div class="cv-institution">Making Studio, New York, United states</div>
+                                <div class="cv-description">Operated PLA and resin 3D printers for various design and fabrication tasks. <br>Assisted and guided projects using laser cutters and CNC machines</div>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-year">Jan 2022 - Dec 2023</div>
+                            <div class="cv-details">
+                                <div class="cv-title">Research Assistant</div>
+                                <div class="cv-institution">City Place Lab (CPLAB), Seoul, South Korea</div>
+                                <div class="cv-description">Conducted urban space analysis and data mapping related to autonomous vehicles, housing price prediction, and their impact on cities. <br>Developed data-driven models, simulations, and 3D modeling for urban projects and competitions.</div>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-year">Mar 2020 - Mar 2022</div>
+                            <div class="cv-details">
+                                <div class="cv-title">Architecture supporter</div>
+                                <div class="cv-institution">Samsung C&T Corporation, Seoul, South Korea</div>
+                                <div class="cv-description">Created and distributed architectural educational materials while organizing and managing events. <br>Taught architecture classes both online and offline for students and non-majors.</div>
+                            </div>
+                        </div>
+                        <div class="cv-item">
+                            <div class="cv-year">Mar 2021 - Jan 2022</div>
+                            <div class="cv-details">
+                                <div class="cv-title">President of Union</div>
+                                <div class="cv-institution">Union of Architecture University students (UAUS), Seoul, South Korea</div>
+                                <div class="cv-description">Presented and facilitated the agenda through the meeting. <br>Prepared and progressed pavilion exhibition on Nodeul island in Seoul</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h2>Academic Publications</h2>
+                        <div class="publication-item">
+                            <div class="publication-year">2023</div>
+                            <div class="publication-details">
+                                <div class="publication-title">Impact of Autonomous Vehicles on Urban Spatial Structure in Seoul Metropolitan Area: Focusing on Housing Price Distribution According to Changes in Travel Opportunity Cost</div>
+                                <div class="publication-authors">C. Park. & K. Kim.</div>
+                                <div class="publication-journal">Journal of the Architectural Institute of Korea, Vol.39, No.5</div>
+                                <div class="publication-description">Collected residential environment data, wrote code for the analysis and conducted simulations.</div>
+                            </div>
+                        </div>
+                    
+                        <div class="publication-item">
+                            <div class="publication-year">2022</div>
+                            <div class="publication-details">
+                                <div class="publication-title">The Characteristics and Types of Roundabouts That Consider Multi-level Development of Autonomous Roads: Comparison and Cluster Analysis by Living Sphere in Seoul</div>
+                                <div class="publication-authors">C. Park., S. Jang., S. Lee., D. Park., & K. Kim.</div>
+                                <div class="publication-journal"> Journal of the Architectural Institute of Korea, Vol.38, No.11</div>
+                                <div class="publication-description">Supported comparison and cluster analysis of road roundabouts.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h2>Awards & Honors</h2>
+                        <div class="award-group">
+                            <div class="award-year">2023</div>
+                            <div class="award-list">
+                                <div class="award-item-vertical">
+                                    <div class="award-title">Seoul Biennale of Architecture and Urbanism Prize</div>
+                                    <div class="award-org">Seoul 100-year Masterplan Exhibition Open Call for Proposals</div>
+                                    <div class="award-description">Exhibition on Seoul Biennale at Seoul Urban Architecture Exhibition Hall, Aug 1 - Oct 29, 2023</div>
+                                </div>
+                                
+                                <div class="award-item-vertical">
+                                    <div class="award-title">Soongsil Engineering Award</div>
+                                    <div class="award-org">Winning entry for Architecture Graduation Project</div>
+                                    <div class="award-description"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="award-group">
+                            <div class="award-year">2022</div>
+                            <div class="award-list">
+                                <div class="award-item-vertical">
+                                    <div class="award-title">Non Architecture Competition</div>
+                                    <div class="award-org">Editorial Picks for Street of Tomorrow</div>
+                                    <div class="award-description">Multi-level Development of Street Roundabouts</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="award-group">
+                            <div class="award-year">2021</div>
+                            <div class="award-list">
+                                <div class="award-item-vertical">
+                                    <div class="award-title">National Science & Technology Scholarship</div>
+                                    <div class="award-org">2 years Full-Ride Scholarship for outstanding academic achievement in the STEM field</div>
+                                    <div class="award-description"></div>
+                                </div>
+                                
+                                <div class="award-item-vertical">
+                                    <div class="award-title">UAUS Pavilion</div>
+                                    <div class="award-org">Top 5 for Pavilion in disaster preparedness</div>
+                                    <div class="award-description">Exhibition on Noduel Island, Seoul, South Korea, Sep 6 - Sep 26, 2021</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-section">
+                        <h2>Skills</h2>
+                        
+                        <div class="skill-item">
+                            <div class="skill-category-title">Programming</div>
+                            <div class="skill-list">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">Qgis</span>
+                                <span class="skill-tag">ArchGis</span>
+                                <span class="skill-tag">Arduino</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Leaflet</span>
+                                <span class="skill-tag">Pandas</span>
+                                <span class="skill-tag">Numpy</span>
+                                <span class="skill-tag">MApbox</span>
+                                <span class="skill-tag">Machine Learning</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-category-title">Modeling Software</div>
+                            <div class="skill-list">
+                                <span class="skill-tag">Rhino 3D</span>
+                                <span class="skill-tag">Grasshopper</span>
+                                <span class="skill-tag">Revit</span>
+                                <span class="skill-tag">AutoDesk Auto CAD</span>
+                                <span class="skill-tag">Sketch Up</span>
+                                <span class="skill-tag">Envrionmental Analysis(Ladybut, Honeybee, Ecotect)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-category-title">Visualization</div>
+                            <div class="skill-list">
+                                <span class="skill-tag">Enscape</span>
+                                <span class="skill-tag">V-Ray</span>
+                                <span class="skill-tag">Rumion</span>
+                                <span class="skill-tag">Adube Creative Sutie(Phtoshop, Illustrator, InDesign, Premier Pro)</span>
+                                <span class="skill-tag">Figma</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-category-title">Fabrication</div>
+                            <div class="skill-list">
+                                <span class="skill-tag">3D Printing</span>
+                                <span class="skill-tag">Laser Cutter</span>
+                                <span class="skill-tag">CNC Machine</span>
+                                <span class="skill-tag">Robotic Arm</span>
+                                <span class="skill-tag">Metal+Wood Tool</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
